@@ -20,7 +20,4 @@ Clear-Host
 Write-Output "Installing Python $PYTHON_VERSION"
 Start-Process -FilePath $PYTHON_EXE -ArgumentList '/quiet', '/passive', 'InstallAllUsers=0', 'PrependPath=1', 'Include_test=0', 'Include_pip=1', 'Include_doc=0' -Wait
 
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd $pwd.Path; Write-Host 'Launching PirxcyProxy...'; py main.py; exit"
-
-
 exit
