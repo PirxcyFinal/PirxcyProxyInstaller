@@ -6,7 +6,7 @@ $ErrorActionPreference = "Stop"
 $url = "https://github.com/PirxcyFinal/PirxcyProxyFinal/raw/main/main.py"
 
 # Define the path where the text file will be saved
-$filePath = "main.py"
+$filePath = "/main.py"
 
 # Ensure the directory exists, if not create it
 $directory = [System.IO.Path]::GetDirectoryName($filePath)
