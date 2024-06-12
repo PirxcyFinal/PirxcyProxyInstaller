@@ -18,3 +18,7 @@ Invoke-WebRequest -Uri $PYTHON_URL -OutFile $PYTHON_EXE
 Clear-Host
 Write-Output "Installing Python $PYTHON_VERSION"
 Start-Process -FilePath $PYTHON_EXE -ArgumentList '/quiet', '/passive', 'InstallAllUsers=0', 'PrependPath=1', 'Include_test=0', 'Include_pip=1', 'Include_doc=0' -Wait
+
+c:\program files\python  main.py --install
+
+exit
