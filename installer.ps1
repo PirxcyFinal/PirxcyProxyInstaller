@@ -5,6 +5,12 @@ $ErrorActionPreference = "Stop"
 #Install main.py
 Write-Output "Installing main.py"
 Invoke-WebRequest -Uri "https://github.com/PirxcyFinal/PirxcyProxyFinal/raw/main/main.py" -OutFile "main.py"
+Write-Output "Installed main.py"
+
+#Install requirements.txt
+Write-Output "Installing requirements.txt"
+Invoke-WebRequest -Uri "https://github.com/PirxcyFinal/PirxcyProxyFinal/raw/main/requirements.txt" -OutFile "requirements.txt"
+Write-Output "Installed requirements.txt  "
 
 # Install python
 $PYTHON_VERSION = "3.10.11"
@@ -20,6 +26,8 @@ Clear-Host
 Write-Output "Installing Python $PYTHON_VERSION"
 Start-Process -FilePath $PYTHON_EXE -ArgumentList '/quiet', '/passive', 'InstallAllUsers=0', 'PrependPath=1', 'Include_test=0', 'Include_pip=1', 'Include_doc=0' -Wait
 
+
+py -m pip install -r requirements.txt
 py main.py --install
 
 exit
